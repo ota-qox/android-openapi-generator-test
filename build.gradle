@@ -1,14 +1,29 @@
 buildscript {
     ext {
-        compose_version = '1.1.0-beta01'
+        gradleVersion = '7.2.0'
+        hiltVersion = '2.43.2'
+        kotlinVersion = '1.7.10'
     }
-}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.2.1' apply false
     id 'com.android.library' version '7.2.1' apply false
-    id 'org.jetbrains.kotlin.android' version '1.5.31' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10' apply false
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    composeVersion = '1.2.1'
+    hiltAndroidXVersion = '1.0.0'
 }
