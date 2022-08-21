@@ -26,4 +26,5 @@ task clean(type: Delete) {
 ext {
     composeVersion = '1.2.1'
     hiltAndroidXVersion = '1.0.0'
+    roomVersion = '2.4.3'
 }

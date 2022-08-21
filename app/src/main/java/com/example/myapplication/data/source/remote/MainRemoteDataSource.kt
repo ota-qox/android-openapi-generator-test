@@ -31,4 +31,8 @@ class MainRemoteDataSource @Inject constructor(
             return@withContext Error(e)
         }
     }
+
+    override suspend fun savePet(pet: Pet) {
+        TODO("Not yet implemented")
+    }
 }
